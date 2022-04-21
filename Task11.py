@@ -3,8 +3,10 @@
 
 count = int(input('Введите количество элементов: '))
 num = 1
+list = [1]
 
-for i in range (0, count):
-    print(num)
+for i in range (0, count - 1):
     num *= -3
-    
+    list.append(num)
+
+print(list)
