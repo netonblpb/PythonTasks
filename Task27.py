@@ -1,20 +1,13 @@
-# В заданном списке вещественных чисел найдите разницу между максимальным и минимальным значением дробной части элементов. 
-# Пример: [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+# Строка содержит набор чисел. Показать большее и меньшее число
+# Символ-разделитель - пробел
 
-list = [1.1, 1.2, 3.1, 5.0, 10.03]
-divlist = []
+collection = '1 45 655 23 165 13 8'
+splitted = collection.split()
+min = int(collection[0])
+max = int(collection[0])
 
-for i in list:
-    divlist.append(round(i%1, 10))
+for i in range(0, len(splitted)):
+    if int(splitted[i]) > max: max = int(splitted[i])
+    if int(splitted[i]) < min: min = int(splitted[i])
 
-print(divlist)
-
-max = 0
-
-for i in range(0, len(divlist)) :
-    for j in range(0, len(divlist)):
-        modul = abs(divlist[i] - divlist[j])
-        if divlist[j] != 0 and divlist[i] != 0 and modul > max:
-            max = modul
-
-print(max)
+print(f'{min}       {max}')
