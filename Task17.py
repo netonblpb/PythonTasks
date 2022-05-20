@@ -6,14 +6,26 @@ dots = int(input('Введите значение для крайних точе
 
 elements = []
 mult = 1
-f = open('File.txt', 'r')
+file = open('File.txt', 'r')
 
-for i in range (-dots, dots + 1):
-    elements.append(i)
+# -----------  Вариант 1 -----------------
+# for i in range (-dots, dots + 1):
+#     elements.append(i)
 
-print(elements)
+# print(elements)
 
-for line in f:
+# for line in file:
+#     mult = mult * int(elements[int(line)])
+
+# print(mult)
+
+# -----------  Вариант 2 -----------------
+elements = [i for i in range (-dots, dots + 1)]
+
+for line in file:
     mult = mult * int(elements[int(line)])
 
+print(elements)
 print(mult)
+
+file.close()

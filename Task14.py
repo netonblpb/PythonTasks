@@ -1,10 +1,15 @@
 # Подсчитать сумму цифр в вещественном числе.
 
 numb = input('Введите вещественное число: ')
-sum = 0
+summa = 0
 
 numb = numb.replace('.', '')
 
-for i in numb:
-    sum = sum + int(i)
-print(sum)
+# -----------  Вариант 1 -----------------
+# for i in numb:
+#     summa = summa + int(i)
+
+# -----------  Вариант 2 -----------------
+summa = sum(map(int, str(numb)))
+
+print(summa)

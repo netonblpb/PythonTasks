@@ -3,7 +3,12 @@
 amount = int(input('Введите количество элементов последовательности: '))
 summa = 0
 
-for i in range(1, amount):    
-    summa = summa + ((1 + 1 / i) ** i)
+# -----------  Вариант 1 -----------------
+# for i in range(1, amount):    
+#     summa = summa + ((1 + 1 / i) ** i)
+# print(summa)
 
-print(summa)
+
+# -----------  Вариант 2 -----------------
+summas = [1 + (1 / i) ** i for i in range(1, amount)]
+print(sum(summas))

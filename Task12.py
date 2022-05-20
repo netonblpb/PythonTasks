@@ -5,7 +5,11 @@ Dict = {}
 
 count = int(input('Введите количество элементов словаря: '))
 
-for i in range(0, count):
-    Dict[i] = i * 3 + 1
+# -----------  Вариант 1 -----------------
+# for i in range(0, count):
+#     Dict[i] = i * 3 + 1
+
+# -----------  Вариант 2 -----------------
+Dict = {i : i * 3 + 1 for i in range(count)}
 
 print(Dict)
